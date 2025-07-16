@@ -1,0 +1,75 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to top, #c8e9f8, #ffffff);
+  font-family: sans-serif;
+}
+
+.game-container {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+  overflow: hidden;
+}
+
+/* 거북이 (캐릭터) */
+#turtle {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 50px;
+  height: 35px;
+  background-color: #4CAF50;
+  border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
+  box-shadow:
+    45px 5px 0 -5px #81C784,   /* 머리 */
+    5px 30px 0 -10px #388E3C,  /* 다리 */
+    20px 30px 0 -10px #388E3C,
+    35px 30px 0 -10px #388E3C,
+    50px 30px 0 -10px #388E3C;
+  transition: bottom 0.05s;
+}
+
+/* 장애물 - 땅 */
+.obstacle {
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  background: #333;
+  bottom: 0;
+}
+
+/* 장애물 - 공중 */
+.obstacle.sky {
+  top: 120px;
+  bottom: auto;
+  background-color: crimson;
+  height: 20px;
+  border-radius: 50%;
+}
+
+#score {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+#game-over {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#restart-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+
+
